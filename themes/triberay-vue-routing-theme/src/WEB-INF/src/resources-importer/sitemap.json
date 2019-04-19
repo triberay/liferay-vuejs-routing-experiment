@@ -1,0 +1,25 @@
+{
+  "publicPages": [
+    {
+      "friendlyURL": "/home",
+      "name": "Vue Routing Experiment",
+      "title": "Vue Routing Experiment",
+      "layoutTemplateId": "1_column"
+    },
+    {
+      "friendlyURL": "/users",
+      "name": "Users",
+      "title": "Users",
+      "layoutTemplateId": "1_column"
+    },
+    {
+      "friendlyURL": "/test",
+      "name": "Test",
+      "title": "Test",
+      "layoutTemplateId": "1_column"
+    }
+  ]
+}
+
+
+

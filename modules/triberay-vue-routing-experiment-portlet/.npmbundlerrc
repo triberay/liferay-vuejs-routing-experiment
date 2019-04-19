@@ -1,0 +1,6 @@
+{
+    "exclude": {
+        "vue": ["src/**/*.js"],
+        "vue-router": ["src/**/*.js"]
+    }
+}

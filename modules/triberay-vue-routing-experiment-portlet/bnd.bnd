@@ -1,0 +1,5 @@
+Bundle-Name: triberay-vue-routing-experiment-portlet
+Bundle-SymbolicName: com.triberay.vue.routing.experiment
+Bundle-Version: 1.0.0
+Export-Package: com.triberay.vue.routing.experiment.constants
+Web-ContextPath: /triberay-vue-routing-experiment-portlet

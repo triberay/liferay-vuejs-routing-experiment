@@ -1,0 +1,21 @@
+{
+	"dependencies": {
+		"vue": "^2.6.10",
+		"vue-router": "^3.0.6"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.4.3",
+		"@vue/cli-plugin-babel": "^3.6.0",
+		"@vue/cli-service": "^3.6.0",
+		"liferay-npm-bundler": "^2.6.2",
+		"node-sass": "^4.11.0",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"main": "lib/index.common",
+	"name": "triberay-vue-routing-experiment-portlet",
+	"scripts": {
+		"build": "vue-cli-service build --formats commonjs --target lib --name index src/main/resources/META-INF/resources/**/*.js && liferay-npm-bundler"
+	},
+	"version": "1.0.0"
+}
