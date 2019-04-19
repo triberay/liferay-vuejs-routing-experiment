@@ -1,5 +1,12 @@
 /* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
 
+nav#navigation ul {
+  li.selected a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
 /* inject:imports */
 /* endinject */
 
