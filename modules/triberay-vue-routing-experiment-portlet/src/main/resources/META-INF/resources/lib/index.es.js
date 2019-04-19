@@ -43,10 +43,8 @@ export function syncRoute(siteUrl) {
 			router.beforeEach((to, from, next) => {
 				let spaCurrentPath = Liferay.SPA.app.activePath;
 				let routeToPath = siteUrl + to.path;
-				console.log("  info: Vue routing to  :  " + routeToPath);
-				console.log("  info: SPA current path: " + spaCurrentPath);
 				if (spaCurrentPath != routeToPath) {
-					console.log("init SPA navigation to " + routeToPath);
+					console.log("Vue router was triggered, initiating SPA navigation as well: " + routeToPath);
 					Liferay.SPA.app.navigate(routeToPath);
 				}
 				next();
@@ -60,12 +58,10 @@ export function syncRoute(siteUrl) {
 					currentRoute = siteUrl + router.currentRoute.path;
 				}
 				let spaToPath = event.path;
-				console.log("  info: SPA navigating to: " + spaToPath);
-				console.log("  info: Vue current route: " + currentRoute);
 
 				if (spaToPath != currentRoute) {
 					let route = spaToPath.substring(spaToPath.lastIndexOf('/'));
-					console.log("init router push to " + route);
+					console.log("Liferay SPA navigation was triggered, pushing to Vue router as well: " + route);
 					router.push(route);
 				}
 			});
