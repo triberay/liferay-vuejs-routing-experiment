@@ -51,18 +51,20 @@ export function syncRoute(siteUrl) {
 			});
 
 			Liferay.SPA.app.on('endNavigate', function(event) {
-				let currentRoute;
-				if (router.currentRoute.path == '/') {
-					currentRoute = siteUrl + '/home';
-				} else {
-					currentRoute = siteUrl + router.currentRoute.path;
-				}
 				let spaToPath = event.path;
+				if (spaToPath.startsWith(siteUrl)) {
+					let currentRoute;
+					if (router.currentRoute.path == '/') {
+						currentRoute = siteUrl + '/home';
+					} else {
+						currentRoute = siteUrl + router.currentRoute.path;
+					}
 
-				if (spaToPath != currentRoute) {
-					let route = spaToPath.substring(spaToPath.lastIndexOf('/'));
-					console.log("Liferay SPA navigation was triggered, pushing to Vue router as well: " + route);
-					router.push(route);
+					if (spaToPath != currentRoute) {
+						let route = spaToPath.substring(spaToPath.lastIndexOf('/'));
+						console.log("Liferay SPA navigation was triggered, pushing to Vue router as well: " + route);
+						router.push(route);
+					}
 				}
 			});
 		}
