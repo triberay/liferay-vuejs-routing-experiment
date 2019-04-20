@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <h1>The User Page</h1>
-        <hr>
-        <button @click="navigateToHome" class="btn btn-primary">Go to Home</button>
+    <div class="appContent">
+        <h4>Users Page</h4>
         <hr>
         <router-view></router-view>
+        <hr>
+        <button @click="navigateToHome" class="btn btn-primary">Go to Home</button>
     </div>
 </template>
 

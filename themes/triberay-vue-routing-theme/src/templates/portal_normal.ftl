@@ -36,17 +36,15 @@
 			</h1>
 		</div>
 
-		<#if !is_signed_in>
-			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
-		</#if>
-
 		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
 	</header>
 
-	<section id="vueApp">
-		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+	<section id="vueApp" data-senna-off="true">
+		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "decorate") />
+		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupUseCustomTitle", "true") />
+		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupCustomTitle", "Vue.js App:") />
 		<@liferay_portlet["runtime"] instanceId="embeddedVuePortlet" defaultPreferences="${freeMarkerPortletPreferences}" portletName="com_triberay_vue_routing_experiment_portlet_TriberayVueRoutingExperimentPortlet" />
 		<#assign VOID = freeMarkerPortletPreferences.reset() />
 		<div id="vueRoutingExperimentPortlet"></div>

@@ -1,5 +1,5 @@
 <template>
-    <div id="routing-app">
+    <div id="routingApp">
         <app-header></app-header>
         <router-view></router-view>
     </div>
@@ -13,13 +13,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    #routing-app {
-        padding: 10px;
-
-        button {
-            margin: 2px;
-        }
-    }
-</style>

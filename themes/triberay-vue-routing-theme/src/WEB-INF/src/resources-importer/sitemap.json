@@ -2,8 +2,8 @@
   "publicPages": [
     {
       "friendlyURL": "/home",
-      "name": "Vue Routing Experiment",
-      "title": "Vue Routing Experiment",
+      "name": "Home",
+      "title": "Home",
       "layoutTemplateId": "1_column"
     },
     {
@@ -20,6 +20,3 @@
     }
   ]
 }
-
-
-

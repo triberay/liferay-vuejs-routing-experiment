@@ -1,13 +1,22 @@
 /* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
 
-nav#navigation ul {
-  li.selected a {
-    text-decoration: underline;
-    font-weight: bold;
-  }
-}
-
 /* inject:imports */
 /* endinject */
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+#vueApp {
+  margin: 30px;
+  background-color: #eee;
+
+  #routingApp {
+    padding: 0 10px 10px 10px;
+
+    .appContent  {
+      padding: 10px;
+    }
+  }
+}
+.portlet-title-text {
+  font-size: 1.5em;
+}
