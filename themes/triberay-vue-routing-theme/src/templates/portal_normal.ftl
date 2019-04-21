@@ -10,6 +10,10 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	<@liferay_util["include"] page=top_head_include />
+
+	<script language="JavaScript">
+		let vueInst;
+	</script>
 </head>
 
 <body class="${css_class}">
@@ -47,7 +51,6 @@
 		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupCustomTitle", "Vue.js App:") />
 		<@liferay_portlet["runtime"] instanceId="embeddedVuePortlet" defaultPreferences="${freeMarkerPortletPreferences}" portletName="com_triberay_vue_routing_experiment_portlet_TriberayVueRoutingExperimentPortlet" />
 		<#assign VOID = freeMarkerPortletPreferences.reset() />
-		<div id="vueRoutingExperimentPortlet"></div>
 	</section>
 
 	<section id="content">
